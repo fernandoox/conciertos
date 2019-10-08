@@ -9,7 +9,7 @@ const Results = ({history}) => {
 
    const dispatch = useDispatch();
    const conciertos = useSelector(state => state.conciertos)
-   console.log(conciertos)
+
    useEffect(() => {
       dispatch(getConciertos());
    }, [dispatch])
