@@ -1,14 +1,15 @@
-import { createStore, combineReducers } from 'redux';
-import results from './reducers/results';
-import suggestions from './reducers/suggestions';
-import currentItem from './reducers/currentItem';
+import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import conciertos from './reducers/conciertos';
+import currentConcierto from './reducers/currentConcierto';
 
-const reducer = combineReducers({
-   results,
-   suggestions,
-   currentItem,
-});
+const reducer = combineReducers({conciertos, currentConcierto});
 
-const store = createStore(reducer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+   reducer, 
+   composeEnhancers(applyMiddleware(thunk)),
+);
 
 export default store;
