@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import Page from './page';
-import getConciertosByGenre from '../../redux/actions/getConciertosByGenre';
-import getConciertos from '../../redux/actions/getConciertos';
+import getConciertosByGenre from '../../../redux/actions/getConciertosByGenre';
+import getConciertos from '../../../redux/actions/getConciertos';
 
 const SearchBar = ({generos}) => {
 

@@ -1,4 +1,4 @@
-import API from '../../axios';
+import API from '../../commons/axios';
 
 export const type = 'GET_CONCERT_BY_ID';
 

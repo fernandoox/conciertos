@@ -1,8 +1,7 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Page from './page';
 import getDetalleConcierto from '../../redux/actions/getDetalleConcierto';
-import {Grid} from 'semantic-ui-react';
 
 const Details = (props) => {
 
@@ -21,13 +20,7 @@ const Details = (props) => {
    }
 
    return (
-      <Fragment>
-         <Grid centered columns={2}>
-            <Grid.Column>
-               <Page concert={currentConcierto} goTo={goTo}/>
-            </Grid.Column>
-         </Grid>
-      </Fragment>
+      <Page concert={currentConcierto} goTo={goTo}/>
    );
 }
 
